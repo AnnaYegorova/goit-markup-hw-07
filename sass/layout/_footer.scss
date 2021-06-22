@@ -1,0 +1,124 @@
+.footer {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-white-color);
+
+  & .container {
+    display: flex;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  & .logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-style: normal;
+
+    @include font(700, 14px, 1.14, 0.03em);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.03em;
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+  }
+  &__adress {
+    color: var(--primary-white-color);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  &__link {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+  }
+  &__list {
+    margin-top: 9px;
+
+    & > .item-margin-zero {
+      margin: 0;
+    }
+    & > .footer__item {
+      display: block;
+      margin-top: 9px;
+    }
+  }
+}
+
+.logo-secondpart-footer {
+  color: var(--primary-white-color);
+}
+
+.footer__part-social-list {
+  margin-left: 70px;
+}
+
+.footer__social-list {
+  display: flex;
+}
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--transition-duration)
+    var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.footer__social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.footer__social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+.mailing-form {
+  margin-left: auto;
+}
+
+.icon-send {
+  vertical-align: middle;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.mail-input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--primary-white-color);
+  background-color: var(--secondary-bg-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-right: 6px;
+  transition: border-color var(--transition-duration)
+    var(--transition-timing-function);
+
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
