@@ -1,38 +1,36 @@
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.clients__list {
+  display: flex;
+}
+.clients__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: border var(--transition-duration)
+    var(--transition-timing-function);
 
-  &__list {
-    display: flex;
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
   }
-  &__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #afb1b8;
-    border-radius: 4px;
-    transition: border var(--transition-duration)
-      var(--transition-timing-function);
+}
+.clients__icon {
+  fill: #afb1b8;
+  transition: fill var(--transition-duration) var(--transition-timing-function);
 
-    &:hover,
-    &:focus {
-      border: 1px solid var(--accent-color);
-    }
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: var(--accent-color);
   }
-  &__icon {
-    fill: #afb1b8;
-    transition: fill var(--transition-duration)
-      var(--transition-timing-function);
+}
 
-    .clients__link:hover &,
-    .clients__link:focus & {
-      fill: var(--accent-color);
-    }
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+.clients__item:not(:last-child) {
+  margin-right: 30px;
 }
